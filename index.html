@@ -31,13 +31,147 @@
             fontFamily: {
               manrope: ["manrope", "sans-serif"],
             },
+            colors: {
+              coralRed: "#FF4240",
+              btnHover: "#CC3633",
+            },
           },
         },
       };
     </script>
   </head>
-  <body>
-    <header></header>
+  <body class="font-manrope">
+    <header class="container mx-auto">
+      <!-- navbar section -->
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li class="hover:text-coralRed"><a>Home</a></li>
+              <li class="hover:text-coralRed"><a>Blog</a></li>
+              <li class="hover:text-coralRed"><a>Pages</a></li>
+              <li class="hover:text-coralRed"><a>About</a></li>
+              <li class="hover:text-coralRed"><a>Contact</a></li>
+            </ul>
+          </div>
+          <a class="lg:text-4xl text-2xl font-extrabold"
+            >Hockey<span class="text-coralRed">’</span>s</a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 text-md font-bold">
+            <li class="hover:text-coralRed">
+              <a>Home</a>
+            </li>
+            <li class="hover:text-coralRed">
+              <a>Blog</a>
+            </li>
+            <li class="hover:text-coralRed">
+              <a>Pages</a>
+            </li>
+            <li class="hover:text-coralRed">
+              <a>About</a>
+            </li>
+            <li class="hover:text-coralRed">
+              <a>Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-end flex items-center gap-4">
+          <button>
+            <i class="fa-solid fa-magnifying-glass text-gray-400 text-xl"></i>
+          </button>
+          <a
+            class="btn lg:text-xl font-bold text-white bg-coralRed hover:bg-btnHover"
+            >Get Ticket</a
+          >
+        </div>
+      </div>
+
+      <!-- banner section -->
+      <div class="relative space-y-2 px-2">
+        <div class="carousel w-full">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="./images/banner.png" class="w-full" />
+            <div
+              class="absolute lg:bottom-5 lg:left-5 bottom-1 left-1 flex gap-3"
+            >
+              <a
+                href="#slide3"
+                class="btn btn-circle bg-slate-900 text-white hover:bg-slate-700"
+                >❮</a
+              >
+              <a
+                href="#slide2"
+                class="btn btn-circle bg-slate-900 text-white hover:bg-slate-700"
+                >❯</a
+              >
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="./images/banner.png" class="w-full" />
+            <div class="absolute bottom-5 left-5 flex gap-4">
+              <a
+                href="#slide1"
+                class="btn btn-circle bg-slate-900 text-white hover:bg-slate-700"
+                >❮</a
+              >
+              <a
+                href="#slide3"
+                class="btn btn-circle bg-slate-900 text-white hover:bg-slate-700"
+                >❯</a
+              >
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="./images/banner.png" class="w-full" />
+            <div class="absolute bottom-5 left-5 flex gap-4">
+              <a
+                href="#slide2"
+                class="btn btn-circle bg-slate-900 text-white hover:bg-slate-700"
+                >❮</a
+              >
+              <a
+                href="#slide1"
+                class="btn btn-circle bg-slate-900 text-white hover:bg-slate-700"
+                >❯</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- banner text -->
+        <div
+          class="lg:absolute lg:bottom-12 lg:right-12 lg:w-2/5 p-5 bg-slate-900 text-white rounded-lg"
+        >
+          <h3 class="font-bold lg:text-xl text-base mb-3">
+            Meet all the heroes from the field
+          </h3>
+          <p class="text-gray-300 text-sm lg:text-base">
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+            turpis placerat dolor. Purus urna in sit nullam proin.
+          </p>
+        </div>
+      </div>
+    </header>
     <main></main>
     <footer></footer>
   </body>
